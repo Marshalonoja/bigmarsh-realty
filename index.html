@@ -1,317 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BIGMARSH REALTY | Smart Property Investments in Nigeria</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIGMARSH REALTY | Property, Investment & Education</title>
+  <meta name="description" content="BIGMARSH REALTY – Property listings, real estate investment opportunities, education, and market trends in Nigeria." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#0f766e;
+      --secondary:#f59e0b;
+      --dark:#0f172a;
+      --light:#f8fafc;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:#fff;color:#1e293b;line-height:1.6}
+    a{text-decoration:none;color:inherit}
 
-<meta name="description" content="BIGMARSH REALTY – Luxury real estate, land banking, and property investment opportunities in Abuja, Nigeria.">
+    /* Header */
+    header{background:linear-gradient(rgba(15,118,110,.85),rgba(15,118,110,.85)),url('https://images.unsplash.com/photo-1560518883-ce09059eeffa') center/cover no-repeat;color:#fff}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:20px 8%}
+    nav h1{font-size:24px;font-weight:700}
+    nav ul{display:flex;gap:25px;list-style:none}
+    nav ul li a{font-weight:500}
+    .hero{padding:90px 8%;max-width:900px}
+    .hero h2{font-size:42px;line-height:1.2;margin-bottom:20px}
+    .hero p{font-size:18px;margin-bottom:30px}
+    .btn{display:inline-block;background:var(--secondary);color:#000;padding:14px 28px;border-radius:30px;font-weight:600}
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    /* Sections */
+    section{padding:80px 8%}
+    .section-title{text-align:center;margin-bottom:50px}
+    .section-title h3{font-size:32px;color:var(--dark)}
+    .section-title p{color:#64748b}
 
-<style>
-/* =========================
-   GLOBAL STYLES
-========================= */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-html{
-  scroll-behavior:smooth;
-}
-body{
-  color:#1e293b;
-  background:#ffffff;
-}
-a{text-decoration:none;color:inherit}
-section{padding:80px 8%}
-h2{font-size:36px;margin-bottom:20px}
-p{line-height:1.7}
+    /* Listings */
+    .listings{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+    .card{border-radius:15px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+    .card img{width:100%;height:200px;object-fit:cover}
+    .card-body{padding:20px}
+    .price{color:var(--primary);font-weight:700;margin-top:10px}
 
-/* =========================
-   HEADER & NAV
-========================= */
-header{
-  min-height:100vh;
-  background:
-    linear-gradient(rgba(15,118,110,.8),rgba(15,118,110,.8)),
-    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80");
-  background-size:cover;
-  background-position:center;
-  animation:heroSlide 18s infinite;
-  color:#fff;
-}
-@keyframes heroSlide{
-  0%{background-image:linear-gradient(rgba(15,118,110,.8),rgba(15,118,110,.8)),url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c")}
-  50%{background-image:linear-gradient(rgba(15,118,110,.8),rgba(15,118,110,.8)),url("https://images.unsplash.com/photo-1576941089067-2de3c901e126")}
-  100%{background-image:linear-gradient(rgba(15,118,110,.8),rgba(15,118,110,.8)),url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c")}
-}
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 8%;
-}
-nav h1{font-size:26px;font-weight:700}
-nav ul{
-  display:flex;
-  gap:20px;
-  list-style:none;
-}
-nav ul li a{font-weight:500}
+    /* Education */
+    .edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+    .edu-box{padding:30px;border:1px solid #e2e8f0;border-radius:15px}
+    .edu-box h4{margin-bottom:10px}
 
-/* =========================
-   HERO
-========================= */
-.hero{
-  max-width:850px;
-  padding:120px 8%;
-}
-.hero h2{
-  font-size:44px;
-  margin-bottom:20px;
-}
-.hero p{
-  font-size:18px;
-  margin-bottom:30px;
-}
-.btn{
-  display:inline-block;
-  background:#f59e0b;
-  color:#000;
-  padding:14px 26px;
-  border-radius:30px;
-  font-weight:600;
-  margin-right:10px;
-}
+    /* Lead form */
+    .lead{background:var(--light);border-radius:20px;padding:50px;max-width:900px;margin:auto}
+    form{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    form input, form select{padding:14px;border-radius:10px;border:1px solid #cbd5e1}
+    form button{grid-column:1/-1;background:var(--primary);color:#fff;padding:16px;border:none;border-radius:30px;font-size:16px}
 
-/* =========================
-   ABOUT US
-========================= */
-.about-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-}
-.card{
-  background:#f8fafc;
-  padding:25px;
-  border-radius:14px;
-}
+    /* Footer */
+    footer{background:#020617;color:#cbd5e1;padding:40px 8%;text-align:center}
 
-/* =========================
-   PROPERTIES
-========================= */
-#properties{background:#f8fafc}
-.property-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-}
-.property-card{
-  background:#fff;
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-.property-card img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-}
-.property-card .content{
-  padding:20px;
-}
-.badge{
-  background:#dc2626;
-  color:#fff;
-  padding:6px 12px;
-  border-radius:20px;
-  display:inline-block;
-  font-size:12px;
-  margin-bottom:10px;
-}
-.price{font-weight:700;color:#0f766e}
-
-/* =========================
-   DIASPORA
-========================= */
-.diaspora{
-  background:linear-gradient(135deg,#0f766e,#115e59);
-  color:#fff;
-  border-radius:20px;
-}
-
-/* =========================
-   INVEST
-========================= */
-.invest-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-}
-
-/* =========================
-   FORMS
-========================= */
-form input, form select, form textarea{
-  width:100%;
-  padding:12px;
-  margin-bottom:12px;
-  border-radius:8px;
-  border:1px solid #cbd5e1;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer{
-  background:#0f172a;
-  color:#fff;
-  text-align:center;
-  padding:40px 8%;
-}
-</style>
+    @media(max-width:768px){
+      .hero h2{font-size:32px}
+      form{grid-template-columns:1fr}
+      nav ul{display:none}
+    }
+  </style>
+<!-- SEO META -->
+<meta name="keywords" content="Abuja property for sale, land investment Abuja, houses for sale in Abuja, real estate investment Nigeria, BIGMARSH REALTY">
+<meta name="author" content="BIGMARSH REALTY">
+<meta property="og:title" content="BIGMARSH REALTY | Smart Property & Investment Deals in Abuja">
+<meta property="og:description" content="Buy houses, invest in land, and learn real estate with BIGMARSH REALTY.">
+<meta property="og:type" content="website">
 </head>
-
 <body>
 
-<header id="home">
+<header>
   <nav>
     <h1>BIGMARSH REALTY</h1>
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#properties">Properties</a></li>
-      <li><a href="#invest">Invest</a></li>
+      <li><a href="#listings">Listings</a></li>
       <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#login">Login</a></li>
-      <li><a href="#register">Register</a></li>
+      <li><a href="#trends">Market Trends</a></li>
+      <li><a href="#landing">Invest</a></li>
     </ul>
   </nav>
-
   <div class="hero">
-    <h2>Smart Property Investments for Visionary Nigerians</h2>
-    <p>Luxury homes, verified lands, and profitable investment opportunities across Abuja.</p>
-    <a href="#properties" class="btn">View Properties</a>
-    <a href="tel:07063151975" class="btn">Book Consultation</a>
+    <h2>Smart Properties. Profitable Investments.</h2>
+    <p>We connect investors and homebuyers to high-value real estate opportunities while educating them for smarter decisions.</p>
+    <a href="https://wa.me/2349125816477" target="_blank" class="btn">Chat on WhatsApp</a>
   </div>
 </header>
 
-<section id="about">
-  <h2>About BIGMARSH REALTY</h2>
-  <p>
-    BIGMARSH REALTY is a trusted Abuja-based real estate company delivering luxury homes,
-    land banking opportunities, and strategic property investments with transparency and integrity.
-  </p>
-
-  <div class="about-grid">
-    <div class="card"><h3>Organisational Profile</h3><p>Professional real estate advisory, sales, and investment services.</p></div>
-    <div class="card"><h3>Achievements</h3><p>Successful property deliveries and satisfied local & diaspora clients.</p></div>
-    <div class="card"><h3>Services</h3><p>Property sales, land acquisition, consultations, and investment advisory.</p></div>
-    <div class="card"><h3>Careers</h3><p>Join our growing network of consultants and partners.</p></div>
-    <div class="card"><h3>FAQ</h3><p>Common questions about buying, investing, and payment plans.</p></div>
+<!-- LANDING PAGE SECTION -->
+<section id="landing">
+  <div class="section-title">
+    <h3>Investor & Buyer Landing Page</h3>
+    <p>One-click access to premium deals and consultations</p>
+  </div>
+  <div class="lead" style="text-align:center">
+    <p style="font-size:18px;margin-bottom:25px">Speak directly with a property consultant at BIGMARSH REALTY. Get verified listings, off-plan offers, and high-ROI investment opportunities.</p>
+    <a href="https://wa.me/2349125816477" target="_blank" class="btn" style="margin-right:10px">Chat on WhatsApp</a>
+    <a href="mailto:info@bigmarshrealty.com" class="btn">Send an Email</a>
   </div>
 </section>
 
-<section id="properties">
-  <h2>Featured Properties</h2>
-
-  <div class="property-grid">
-    <div class="property-card">
-      <img src="https://images.unsplash.com/photo-1576941089067-2de3c901e126">
-      <div class="content">
-        <span class="badge">SOLD</span>
-        <h3>4 Bedroom Duplex – Apo, Abuja</h3>
-        <p class="price">₦200,000,000</p>
-      </div>
-    </div>
-
-    <div class="property-card">
-      <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
-      <div class="content">
-        <h3>Asokoro Extension Lands</h3>
-        <p>250sqm – ₦9m | 400sqm – ₦20.5m | 500sqm – ₦27m | 1000sqm – ₦40m</p>
-      </div>
-    </div>
-
-    <div class="property-card">
-      <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716">
-      <div class="content">
-        <h3>Wumba Commercial Land</h3>
-        <p>4600sqm – Hotel / Commercial Use</p>
-        <p class="price">₦400,000,000</p>
-      </div>
-    </div>
+<!-- PROPERTY LISTINGS (ADMIN-EDITABLE) -->
+<section id="listings">
+  <div class="section-title">
+    <h3>Featured Properties</h3>
+    <p>Carefully selected properties with high appreciation potential</p>
   </div>
-</section>
-
-<section class="diaspora">
-  <h2>Nigerians in Diaspora</h2>
-  <p>
-    Invest safely from anywhere in the world with transparent processes,
-    flexible payment plans, and dedicated support.
-  </p>
-</section>
-
-<section id="invest">
-  <h2>Invest With Us</h2>
-  <div class="invest-grid">
-    <div class="card"><h3>Land Banking</h3><p>Secure lands early and grow your wealth.</p></div>
-    <div class="card"><h3>Co-Investment</h3><p>Pool funds for higher-value opportunities.</p></div>
-    <div class="card"><h3>Referral Program</h3><p>Earn up to 5% commission when your referrals buy.</p></div>
+  <div class="listings">
+<!-- COPY THIS CARD TO ADD NEW PROPERTIES -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c" alt="Property">
+      <div class="card-body">
+        <h4>3 Bedroom Duplex – Abuja</h4>
+        <p>Secure estate with modern finishing.</p>
+        <p class="price">₦80,000,000</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Property">
+      <div class="card-body">
+        <h4>2 Bedroom Apartment</h4>
+        <p>Ideal for rental income.</p>
+        <p class="price">₦40,000,000</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c" alt="Property">
+      <div class="card-body">
+        <h4>Commercial Land</h4>
+        <p>Perfect for hotel & plaza development.</p>
+        <p class="price">₦380,000,000</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section id="education">
-  <h2>Real Estate Education</h2>
-  <p>Market trends, buyer guides, and smart investment tips.</p>
+  <div class="section-title">
+    <h3>Real Estate Education</h3>
+    <p>Learn how to buy, invest, and profit safely</p>
+  </div>
+  <div class="edu">
+    <div class="edu-box">
+      <h4>First-Time Buyer Guide</h4>
+      <p>Everything you need to know before buying property in Nigeria.</p>
+    </div>
+    <div class="edu-box">
+      <h4>Investment Analysis</h4>
+      <p>Understand ROI, appreciation, and rental yield.</p>
+    </div>
+    <div class="edu-box">
+      <h4>Documentation & Titles</h4>
+      <p>Avoid scams by understanding land titles.</p>
+    </div>
+  </div>
+</section>
+
+<section id="trends">
+  <div class="section-title">
+    <h3>Market Trends & Insights</h3>
+    <p>Stay ahead with real estate data and updates</p>
+  </div>
+  <p style="max-width:800px;margin:auto;text-align:center">Weekly insights on Abuja property prices, emerging locations, off-plan opportunities, and investor tips.</p>
 </section>
 
 <section id="contact">
-  <h2>Contact Us</h2>
-  <p>📍 11 Linda Chalker Street, Behind Africa Community School, Asokoro Abuja</p>
-  <p>📞 07063151975 | 09125816477</p>
-  <p>✉️ bigmarshrealty19@gmail.com</p>
-
-  <form>
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
-    <textarea placeholder="Your Message"></textarea>
-    <button class="btn">Send Message</button>
-  </form>
-</section>
-
-<section id="login">
-  <h2>Login</h2>
-  <form>
-    <input type="email" placeholder="Email or Username">
-    <input type="password" placeholder="Password">
-    <button class="btn">Login</button>
-  </form>
-</section>
-
-<section id="register">
-  <h2>Register</h2>
-  <form>
-    <input type="text" placeholder="Full Name">
-    <input type="email" placeholder="Email">
-    <select>
-      <option>Client</option>
-      <option>Earn With Us</option>
-    </select>
-    <button class="btn">Register</button>
-  </form>
+  <div class="section-title">
+    <h3>Get Property Deals & Investment Tips</h3>
+    <p>Join our investor and buyer list</p>
+  </div>
+  <div class="lead">
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="tel" placeholder="Phone Number">
+      <select>
+        <option>Interested In</option>
+        <option>Buying a Home</option>
+        <option>Land Investment</option>
+        <option>Rental Income</option>
+      </select>
+      <button type="submit">Get Started</button>
+    </form>
+  </div>
 </section>
 
 <footer>
-  <p>Partners: Greenpeak Shelters Ltd | Ideal Homes | Glassy Shades Realty | Braves Homes</p>
-  <p>© BIGMARSH REALTY – All Rights Reserved</p>
+  <p>© 2026 BIGMARSH REALTY. All Rights Reserved.</p>
 </footer>
+
+<!-- WHATSAPP AUTO MESSAGE -->
+<script>
+  const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+  whatsappLinks.forEach(link => {
+    link.href = "https://wa.me/2349125816477?text=Hello%20BIGMARSH%20REALTY,%20I%20am%20interested%20in%20your%20property%20and%20investment%20offers.";
+  });
+</script>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/2349125816477" target="_blank" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px 18px;border-radius:50%;font-size:22px;box-shadow:0 10px 25px rgba(0,0,0,.25);z-index:999">💬</a>
+
+<!-- INVESTOR ONLY LANDING PAGE (FOR ADS) -->
+<section id="investor-landing" style="background:#020617;color:#fff;padding:90px 8%">
+  <div style="max-width:900px;margin:auto;text-align:center">
+    <h2 style="font-size:38px;margin-bottom:20px">Exclusive Property & Investment Opportunities</h2>
+    <p style="font-size:18px;margin-bottom:35px;color:#cbd5e1">Verified Abuja properties, off-plan projects, land banking, and high-yield real estate investments curated by BIGMARSH REALTY.</p>
+    <a href="https://wa.me/2349125816477" target="_blank" class="btn" style="margin-right:15px">Talk to an Expert on WhatsApp</a>
+    <a href="mailto:info@bigmarshrealty.com" class="btn">Request Investment Details</a>
+  </div>
+</section>
 
 </body>
 </html>
